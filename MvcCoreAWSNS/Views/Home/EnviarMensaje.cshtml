@@ -1,0 +1,22 @@
+﻿<h1 style="color:darkblue">Enviar mensaje personalizado</h1>
+<br/>
+
+<form asp-action="EnviarMensaje">
+    <label>Asunto</label>
+    <input type="text" name="asunto" class="form-control" />
+    <br />
+
+    <label>Mensaje</label>
+    <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <br/>
+
+    <button type="submit" class="btn btn-success">
+        Enviar Mensaje
+    </button>
+</form>
+
+@if (ViewData["RESPUESTA"] != null)
+{
+    <hr />
+    <h2 style="color: green">@ViewData["RESPUESTA"]</h2>
+}
